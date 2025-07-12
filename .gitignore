@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Editor/IDE specific
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Alembic cache
+alembic/versions/
+
+# Log files
+*.log
+
+# Sensitive configs
+*.env
