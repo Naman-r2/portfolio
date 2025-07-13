@@ -14,16 +14,22 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 px-8 py-4 flex justify-between items-center transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-lg shadow-md" : "bg-transparent"
+        scrolled ? "bg-white/90 backdrop-blur-lg shadow-md" : "bg-gradient-to-r from-purple-600 to-indigo-700"
       }`}
     >
-      <h1 className="text-xl font-bold text-indigo-700">Naman Sharma</h1>
-      <ul className="flex space-x-6 font-medium text-indigo-700">
-        <li><a href="#about" className="hover:text-purple-700">About</a></li>
-        <li><a href="#skills" className="hover:text-purple-700">Skills</a></li>
-        <li><a href="#projects" className="hover:text-purple-700">Projects</a></li>
-        <li><a href="#resume" className="hover:text-purple-700">Resume</a></li>
-        <li><a href="#contact" className="hover:text-purple-700">Contact</a></li>
+      <h1 className="text-2xl font-bold text-white tracking-wide">Naman Sharma</h1>
+
+      <ul className="flex space-x-6 font-medium">
+        {["About", "Skills", "Projects", "Resume", "Contact"].map((item) => (
+          <li key={item}>
+            <a
+              href={`#${item.toLowerCase()}`}
+              className="text-white hover:text-yellow-300 transition-colors duration-200"
+            >
+              {item}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );
